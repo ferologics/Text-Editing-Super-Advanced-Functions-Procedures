@@ -121,8 +121,8 @@ begin
    for i:= 0 to length(str) do
    begin
        ch:= str[i];
-       case ch of
-            'a'..'z','A'..'Z','0'..'9': begin
+       case ord(ch) of
+                              33..126: begin      //'a'..'z','A'..'Z','0'..'9' to boli krasne casy, ce ce ce re ce...
                                              if (inWord = 0) then
                                                     begin
                                                       inWord:= 1;
@@ -130,7 +130,7 @@ begin
                                                     end;
                                              word += str[i];
                                         end;
-                                   ' ': if (inWord = 1) then
+                                   32: if (inWord = 1) then
                                                    begin
                                                       inWord:= 0;
                                                       if (count = index) then Result:= word
@@ -144,6 +144,7 @@ function vetaOdzadu(str:string):string;
 var i:integer;
 var vyslednyStr:string;
 begin
+   vyslednyStr:= '';
    for i:= pocetSlov(str) downto 1 do vyslednyStr += (slovoNaMieste(str, i) + ' ');
    Delete (vyslednyStr,length(vyslednyStr),length(vyslednyStr));
    Result:= vyslednyStr;
@@ -153,13 +154,13 @@ procedure TForm1.Button1Click(Sender: TObject); // Je X prvocislo ty blbecek?
 var x:integer;
 begin
    x:= StrToIntDef(Form1.Edit4.Text,0);
-   Form1.Memo1.Lines.Add(IntToStr(x) + ' - ' + boolToStr(prvocislo(x)) + '   (0=nie | -1=ano)');
+   Form1.Memo1.Lines.Add(IntToStr(x) + ' -> ' + boolToStr(prvocislo(x)) + '   (0=nie | -1=ano)');
 end;
 
 procedure TForm1.Button2Click(Sender: TObject); // Vypis prvych X prvocisel
 var x:integer;
 begin
-   x:= StrToIntDef(Form1.Edit3.Text,0);
+   x:= StrToIntDef(Form1.Edit4.Text,0);
    prvocisloDo(x);
 end;
 

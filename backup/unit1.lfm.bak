@@ -1,0 +1,144 @@
+object Form1: TForm1
+  Left = 390
+  Height = 530
+  Top = 104
+  Width = 490
+  Caption = 'Form1'
+  ClientHeight = 530
+  ClientWidth = 490
+  LCLVersion = '1.2.6.0'
+  object Memo1: TMemo
+    Left = 8
+    Height = 284
+    Top = 240
+    Width = 472
+    Lines.Strings = (
+      'Memo1'
+    )
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 72
+    Height = 22
+    Top = 210
+    Width = 408
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 8
+    Height = 21
+    Top = 8
+    Width = 472
+    Caption = 'Je X prvocislo ty blbecek?'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 8
+    Height = 21
+    Top = 32
+    Width = 472
+    Caption = 'Vypis prvych X prvocisel'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 8
+    Height = 21
+    Top = 56
+    Width = 472
+    Caption = 'Vypis prvocisla z intervalu (OD DO)'
+    OnClick = Button3Click
+    TabOrder = 4
+  end
+  object Button4: TButton
+    Left = 8
+    Height = 20
+    Top = 80
+    Width = 472
+    Caption = 'Vypis pocet slov vo vete'
+    OnClick = Button4Click
+    TabOrder = 5
+  end
+  object Button5: TButton
+    Left = 8
+    Height = 21
+    Top = 104
+    Width = 472
+    Caption = 'Vypis slovo podla indexu (x) vo vete'
+    OnClick = Button5Click
+    TabOrder = 6
+  end
+  object Button6: TButton
+    Left = 8
+    Height = 20
+    Top = 128
+    Width = 472
+    Caption = 'Vypis vetu odzadu'
+    OnClick = Button6Click
+    TabOrder = 7
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 16
+    Top = 216
+    Width = 57
+    Caption = 'Veta -->'
+    ParentColor = False
+  end
+  object Edit2: TEdit
+    Left = 168
+    Height = 22
+    Top = 184
+    Width = 62
+    TabOrder = 8
+  end
+  object Edit3: TEdit
+    Left = 312
+    Height = 22
+    Top = 184
+    Width = 65
+    TabOrder = 9
+  end
+  object Label2: TLabel
+    Left = 104
+    Height = 16
+    Top = 190
+    Width = 46
+    Caption = 'od -->'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 248
+    Height = 16
+    Top = 190
+    Width = 46
+    Caption = 'do -->'
+    ParentColor = False
+  end
+  object Edit4: TEdit
+    Left = 239
+    Height = 22
+    Top = 154
+    Width = 77
+    TabOrder = 10
+  end
+  object Label4: TLabel
+    Left = 192
+    Height = 16
+    Top = 160
+    Width = 37
+    Caption = 'x -->'
+    ParentColor = False
+  end
+  object Button7: TButton
+    Left = 395
+    Height = 21
+    Top = 155
+    Width = 85
+    Caption = 'Clear'
+    OnClick = Button7Click
+    TabOrder = 11
+  end
+end
